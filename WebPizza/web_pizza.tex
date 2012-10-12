@@ -77,9 +77,182 @@ Préparateur&Personne préparant des commandes& BVR+FL\\
 \hline
 Concept & Type & Definition\\
 \hline
-
+Commande & Classe & \\
+Confection du plat & UC & \\
+Cuisson du plat & UC & \\
+Cuisinier&Acteur&\\
+Ajout des produits&UC&\\
+Emballage des produits&UC&\\
+Préparateur&Acteur&\\
+Terminal & Classe&\\
+Demander de l'aide sur une préparation&UC&\\
+Ingrédients&Classe&\\
+Signaler si un ingrédient commence à manquer&UC&\\
+Signaler le début de la préparation&UC&\\
+Signaler la fin de la préparation&UC&\\
+Mettre une commande en attente&UC&\\
+Annuler une commande&UC&\\
+Système&Acteur&Aussi administrateur du SI\\
+Afficher l'ordre des commandes&UC&\\
+Localiser les produits dans le stock&UC&\\
+Stock & Classe &\\
+Avertir le manager ou le réceptionniste&UC&\\
+Manager&Classe&\\
+Réceptionniste&Classe&\\
+Réceptionniste&Acteur&\\
+Contacter le client&UC&\\
+Client &Classe&\\
+Modifier la commande&UC&\\
+Gérer l'ordonnancement&UC&\\
+Gérer la répartition des commandes&UC&\\
+Planifier commande&UC&\\
+Soumettre une commande à un cuisinier&UC&\\
+Avertir le client par courriel&UC&\\
+Imprimer la commande&UC&\\
+Attacher l'impression à la pizza&UC&\\
+Avertir le livreur&UC&\\
+Livreur&Acteur&\\
+Consulter l'état de la préparation&UC&\\
+Manager&Acteur&\\
+Client&Acteur&\\
 \hline
 \end{tabular}
+
+\subsection{Glossaire}
+\begin{tabular}{|c|c|c|}
+\hline
+Terme&Description&Auteur\\
+\hline
+ \multirow{2}{*}{Préparation d'une commande}&Confection et cuisson des plats &  \multirow{2}{*}{BVR+FL}\\
+&puis ajout des autre produits et emballage&\\
+Préparateur&Personne préparant les commandes& BVR+FL\\
+Manager&Responsable 	du personnel& BVR+FL\\
+Réceptionniste&Employé chargé de l'accueil client& BVR+FL\\
+Livreur& Personne en charge des livraisons&BVR+FL\\
+\hline
+\end{tabular}
+
+\section{Livraison}
+\subsection{Tableau préparatoire}
+\begin{tabular}{|c|c|c|}
+\hline
+Concept & Type & Definition\\
+\hline
+Restaurant&Classe&\\
+Livreur&Classe&\\
+Commande&Classe&\\
+Terminal&Classe&\\
+Livreur&Acteur&\\
+Transporter des commandes&UC&\\
+Prendre en charge une commande&UC&\\
+Signaler la prise en charge&UC&\\
+Terminal&Acteur&\\
+Donner informations clients&UC&\\
+Donner la position du livreur&UC&\\
+Manager&Acteur&\\
+Standardiste&Acteur&\\
+Connaitre les positions des livreurs&UC&\\
+Client&Acteur&\\
+Savoir si le livreur est en approche&UC&\\
+Signaler un danger&UC&\\
+Envoyer message d'alerte&UC&\\
+Message d'alerte&Classe&\\
+\hline
+\end{tabular}
+
+\subsection{Glossaire}
+\begin{tabular}{|c|c|c|}
+\hline
+Terme&Description&Auteur\\
+\hline
+GPS&Global Positioning System&BVR+FL\\
+Simultanément&En un seul voyage&BVR+FL\\
+"En approche"&Signifie que la commande a été prise en charge par le livreur&BVR+FL\\
+\hline
+\end{tabular}
+
+\section{Manager}
+\subsection{Tableau préparatoire}
+\begin{tabular}{|c|c|c|}
+\hline
+Concept & Type & Definition\\
+\hline
+Manager&Acteur&\\
+Fixer les emplois du temps&UC&\\
+Désigner les responsables sécurités&UC&\\
+Visualiser les statistiques&UC&\\
+Visualiser l'état des stocks&UC&\\
+Visualiser la présence des employés&UC&\\
+Visualiser la position d'un livreur&UC&\\
+Visualiser les commandes d'un livreur&UC&\\
+\hline
+\end{tabular}
+
+\subsection{Glossaire}
+\begin{tabular}{|c|c|c|}
+\hline
+Terme&Description&Auteur\\
+\hline
+\hline
+\end{tabular}
+
+\section{Responsable sécurité}
+\subsection{Tableau préparatoire}
+\begin{tabular}{|c|c|c|}
+\hline
+Concept & Type & Definition\\
+\hline
+Collaborateur&Classe&\\
+Désigner comme responsable sécurité&UC&\\
+Recevoir message de sécurité&UC&\\
+Message de sécurité&Classe&\\
+Livreur&Classe&\\
+Responsable sécurité& Acteur&\\
+Consulter message&UC&\\
+Visualiser position du livreur&UC&\\
+Prendre connaissance du numéro de téléphone du livreur&UC&\\
+Application&Acteur&\\
+Montrer les informations nécessaires&UC&\\ 
+Manager&Acteur&\\
+\hline
+\end{tabular}
+
+\subsection{Glossaire}
+\begin{tabular}{|c|c|c|}
+\hline
+Terme&Description&Auteur\\
+\hline
+\multirow{2}{*}{Responsable sécurité}&Personne charger de s'assurer de la sécurité &\multirow{2}{*}{BVR+FL}\\
+&du personnel. Peut être n'importe quel employé&\\
+\hline
+\end{tabular}
+
+\section{Responsable sécurité}
+\subsection{Tableau préparatoire}
+\begin{tabular}{|c|c|c|}
+\hline
+Concept & Type & Definition\\
+\hline
+Application&Acteur&\\
+Gérer les heures de présence&UC&\\
+Collaborateur&Acteur&\\
+Se connecter à l'application &UC&\\
+Signaler prise de service&UC&\\
+Signaler fin de service&UC&\\
+Visualiser les heures effectives&UC&\\
+Manager&Acteur&\\
+\hline
+\end{tabular}
+
+\subsection{Glossaire}
+\begin{tabular}{|c|c|c|}
+\hline
+Terme&Description&Auteur\\
+\hline
+Heures effectives&Horaires réellement effectués par un employé &BVR+FL\\
+\hline
+\end{tabular}
+
 
 \signature[François \bsc{Lepan}\\Benjamin \bsc{Van Ryseghem}]
 

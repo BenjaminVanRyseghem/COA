@@ -1,11 +1,94 @@
 \documentclass[a4paper,10pt]{article}
 \input{/Users/benjamin/Documents/Education/LaTeX/macro.tex}
+\newcommand\entete{\begin{tabular}{|c|c|c|c|}
+\hline
+MASTER 1\up{ère} Année&Titre du Document&22 Octobre 2012&Version 1.0\\
+\hline
+Binôme:&\multirow{3}{*}{Web Pizza}&\multicolumn{2}{c|}{\multirow{3}{*}{Benjamin \bsc{Van Ryseghem}}}\\
+François \bsc{Lepan}&&\multicolumn{2}{c|}{}\\
+Benjamin \bsc{Van Ryseghem}&&\multicolumn{2}{c|}{}\\
+\hline
+\end{tabular}}
 
-\title{COA : Web Pizza }
-\author{François \bsc{Lepan}\\Benjamin \bsc{Van Ryseghem}}
 
+\author{\huge Patron Général \normalsize}
+\date{}
+\title{\normalsize
+\entete}
 \begin{document}
 \maketitle
+\section*{Révisions}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Version&Date&Rédacteur de la modification&Commentaire\\
+\hline
+1.0&22 Octobre 2012&Benjamin \bsc{Van Ryseghem}&Première version\\
+\hline
+\end{tabular}
+
+\section{Introduction}
+Ce document explicite les cas d'utilisations ainsi que les hiérarchies de classes correspondants à une application web de commande de pizza.
+
+\section{Analyse}
+\subsection{Glossaire métier}
+
+\hspace{-1cm}
+\begin{tabular}{|c|c|c|}
+\hline
+Terme&Définition&Auteur\\
+\hline
+Client& Personne souhaitant commander dans le restaurant& BVR+FL\\
+Offre&Ensemble des articles commandables& BVR+FL\\
+Panier&Ensemble des articles  qu'un client souhaite commander& BVR+FL\\
+Commande&Contenu final d'un panier& BVR+FL\\
+Profil&Ensemble des informations relatives à un client& BVR+FL\\
+Avantages&Bénéfice fournit à un client connecté& BVR+FL\\
+Payement rapide&Payement effectué sans avoir à refournir les coordonnées& BVR+FL\\
+Menu&Ensemble d'articles hors menu& BVR+FL\\
+Standardiste&Personne en charge des appels téléphonique& BVR+FL\\
+Livreur&Personne effectuant une livraison& BVR+FL\\
+Préparateur&Personne préparant des commandes& BVR+FL\\
+ \multirow{2}{*}{Préparation d'une commande}&Confection et cuisson des plats &  \multirow{2}{*}{BVR+FL}\\
+&puis ajout des autre produits et emballage&\\
+Préparateur&Personne préparant les commandes& BVR+FL\\
+Manager&Responsable 	du personnel& BVR+FL\\
+Réceptionniste&Employé chargé de l'accueil client& BVR+FL\\
+GPS&Global Positioning System&BVR+FL\\
+Simultanément&En un seul voyage&BVR+FL\\
+\multirow{2}{*}{"En approche"}&Signifie que la commande a été prise en charge&\multirow{2}{*}{BVR+FL}\\
+&par le livreur&\\
+\multirow{2}{*}{Responsable sécurité}&Personne charger de s'assurer de la sécurité &\multirow{2}{*}{BVR+FL}\\
+&du personnel. Peut être n'importe quel employé&\\
+Heures effectives&Horaires réellement effectués par un employé &BVR+FL\\
+\hline
+\end{tabular}
+\subsection{Les cas d'utilisations}
+
+
+
+
+
+
+e\\
+
+e\\
+
+e\\
+
+e\\
+
+e\\
+
+e\\
+
+e\\
+
+
+
+
+
+
+
 
 \section{Prise de Commande}
 \subsection{Tableau préparatoire}
@@ -55,7 +138,7 @@ Gérer le lancement d'une commande&UC&\\
 \subsection{Glossaire}
 \begin{tabular}{|c|c|c|}
 \hline
-Terme&Description&Auteur\\
+Terme&Définition&Auteur\\
 \hline
 Client& Personne souhaitant commander dans le restaurant& BVR+FL\\
 Offre&Ensemble des articles commandables& BVR+FL\\
@@ -121,7 +204,7 @@ Client&Acteur&\\
 \subsection{Glossaire}
 \begin{tabular}{|c|c|c|}
 \hline
-Terme&Description&Auteur\\
+Terme&Définition&Auteur\\
 \hline
  \multirow{2}{*}{Préparation d'une commande}&Confection et cuisson des plats &  \multirow{2}{*}{BVR+FL}\\
 &puis ajout des autre produits et emballage&\\
@@ -163,7 +246,7 @@ Message d'alerte&Classe&\\
 \subsection{Glossaire}
 \begin{tabular}{|c|c|c|}
 \hline
-Terme&Description&Auteur\\
+Terme&Définition&Auteur\\
 \hline
 GPS&Global Positioning System&BVR+FL\\
 Simultanément&En un seul voyage&BVR+FL\\
@@ -212,7 +295,7 @@ Manager&Acteur&\\
 \subsection{Glossaire}
 \begin{tabular}{|c|c|c|}
 \hline
-Terme&Description&Auteur\\
+Terme&Définition&Auteur\\
 \hline
 \multirow{2}{*}{Responsable sécurité}&Personne charger de s'assurer de la sécurité &\multirow{2}{*}{BVR+FL}\\
 &du personnel. Peut être n'importe quel employé&\\
@@ -239,7 +322,7 @@ Manager&Acteur&\\
 \subsection{Glossaire}
 \begin{tabular}{|c|c|c|}
 \hline
-Terme&Description&Auteur\\
+Terme&Définition&Auteur\\
 \hline
 Heures effectives&Horaires réellement effectués par un employé &BVR+FL\\
 \hline

@@ -1,5 +1,9 @@
 \documentclass[a4paper,10pt]{article}
 \input{/Users/benjamin/Documents/Education/LaTeX/macro.tex}
+\usepackage{float}
+\usepackage[toc,page]{appendix} 
+
+
 \newcommand\entete{\begin{tabular}{|c|c|c|c|}
 \hline
 MASTER 1\up{ère} Année&Titre du Document&22 Octobre 2012&Version 1.0\\
@@ -11,12 +15,11 @@ Benjamin \bsc{Van Ryseghem}&&\multicolumn{2}{c|}{}\\
 \end{tabular}}
 
 
-\author{\huge Patron Général \normalsize}
-\date{}
-\title{\normalsize
-\entete}
+\author{François \bsc{Lepan}\\Benjamin \bsc{Van Ryseghem}}
 \begin{document}
-\maketitle
+
+
+\entete
 \section*{Révisions}
 \begin{tabular}{|c|c|c|c|}
 \hline
@@ -31,7 +34,7 @@ Ce document explicite les cas d'utilisations ainsi que les hiérarchies de classe
 
 \section{Analyse}
 \subsection{Glossaire métier}
-
+\small
 \hspace{-1cm}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -62,273 +65,424 @@ Simultanément&En un seul voyage&BVR+FL\\
 Heures effectives&Horaires réellement effectués par un employé &BVR+FL\\
 \hline
 \end{tabular}
+\normalsize
+\newpage
+
 \subsection{Les cas d'utilisations}
+\subsubsection{Vue général}
+
+Ces cas d'utilisation regroupent les trois principales fonctionnalités fournis par le service: (1) la commande d'articles, (2) leur préparation et (3) leur livraison.
+
+
+\begin{figure}[h!]
+\begin{center}
+     \includegraphics[width=15cm]{figures/uc_commande}
+\end{center}
+\caption{Cas d'utilisation: Commande}
+\end{figure}
 
 
 
+\begin{figure}[h!]
+\begin{center}
+     \includegraphics[width=15cm]{figures/uc_preparation}
+\end{center}
+\caption{Cas d'utilisation: Préparation}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+     \includegraphics[width=15cm]{figures/uc_livraison}
+\end{center}
+\caption{Cas d'utilisation: Livraison}
+\end{figure}
 
 
+\newpage
 
-e\\
+\mbox{}
 
-e\\
+\mbox{}
 
-e\\
+\mbox{}
 
-e\\
+\mbox{}
 
-e\\
+\mbox{}
 
-e\\
+\mbox{}
 
-e\\
+\mbox{}
 
+\mbox{}
 
+\mbox{}
 
+\mbox{}
 
+\vspace{10cm}
 
+\subsubsection{Commande}
 
+Ce diagramme de cas d'utilisation représente les actions lié a la commande d'un produit.
+On peut voir sur la figure~\ref{fig:commande} qu'un client ou qu'une standardiste peut passer une commande.
+On constate aussi que le système d'information, piloté par un administrateur est en charge de la gestion des identifications, des mises à jour du système ainsi que de la gestion de l'ordonnancement des commandes.
+De plus, il apparait que le manager est quant à lui responsable de l'attribution du nombres de points de fidélité associé à chaque article.
 
+\begin{figure}[h!]
+\begin{center}
+     \includegraphics[width=15cm]{figures/uc_commande}
+\end{center}
+\caption{Cas d'utilisation: Commande}
+\label{fig:commande}
+\end{figure}
 
-\section{Prise de Commande}
-\subsection{Tableau préparatoire}
-\begin{tabular}{|c|c|c|}
-\hline
-Concept & Type & Definition\\
-\hline
-Client & Acteur & \\
-Consulter les offres & UC & \\
-Ajouter au panier & UC & \\
-Finaliser commande & UC & (Récapitulation + Paiement)\\
-Coordonnées client & Classe & \\
-Envoyer mail de confirmation & UC & \\
-Site & Acteur & Administrateur \\
-Créer un profil & UC & \\
-Connection au profil & UC & \\
-Avantage & Classe & (Point de fidélité + offres promotionnelles)\\
-Paiement rapide & UC & Si utilisateur enregistré\\
-Mémoriser commandes & UC & \\
-Commande & Classe & \\
-Créditer des points & UC & \\
-Article&Classe&ou Produit\\
-Manager & Acteur& \\
-Fixer le nombre de point par article & UC &\\
-Restaurant & Classe & \\
-Offre & Classe&\\
-Descriptif&Classe&\\
-Format&Classe&\\
-Menu&Classe&\\
-Commander des articles&UC&\\
-Maintenance et mise à jour du site&UC&\\
-Commander par téléphone&UC&\\
-Commander au comptoir&UC&\\
-Standardiste&Acteur&\\
-Calculer l'heure probable & \multirow{2}{*}{UC}&\\
-à laquelle la commande sera prête&&\\
-Calculer le temps probable & \multirow{2}{*}{UC}&\\
-nécessaire à la livraison&&\\
-Vérifier disponibilité livreur&UC&\\
-Proposer un horaire de livraison&UC&\\
-Renoncer à la commande&UC&\\
-Proposer un horaire plus tard&UC&\\
-Gérer le lancement d'une commande&UC&\\
-\hline
-\end{tabular}
+\subsubsection{Préparation}
+Ce cas d'utilisation introduit les différents scénarii ainsi que les différents acteurs impliqués dans la préparation d'une commande.
+Les préparations proprement dites sont gérées par trois acteurs: (1) le cuisinier, (2) le préparateur et (3) et le livreur.
 
-\subsection{Glossaire}
-\begin{tabular}{|c|c|c|}
-\hline
-Terme&Définition&Auteur\\
-\hline
-Client& Personne souhaitant commander dans le restaurant& BVR+FL\\
-Offre&Ensemble des articles commandables& BVR+FL\\
-Panier&Ensemble des articles  qu'un client souhaite commander& BVR+FL\\
-Commande&Contenu final d'un panier& BVR+FL\\
-Profil&Ensemble des informations relatives à un client& BVR+FL\\
-Avantages&Bénéfice fournit à un client connecté& BVR+FL\\
-Payement rapide&Payement effectué sans avoir à refournir les coordonnées& BVR+FL\\
-Menu&Ensemble d'articles hors menu& BVR+FL\\
-Standardiste&Personne en charge des appels téléphonique& BVR+FL\\
-Livreur&Personne effectuant une livraison& BVR+FL\\
-Préparateur&Personne préparant des commandes& BVR+FL\\
-\hline
-\end{tabular}
+Le cuisinier est en charge de la confection et de la cuisson des articles. En plus de cela, il peut consulter une aide visant à lui fournir la liste des ingrédients impliqués dans la recette ou signaler un ingrédient venant à manquer. De plus, il doit respecter les étapes de gestion d'une commande.
 
-\section{Préparation des commandes}
-\subsection{Tableau préparatoire}
-\begin{tabular}{|c|c|c|}
-\hline
-Concept & Type & Definition\\
-\hline
-Commande & Classe & \\
-Confection du plat & UC & \\
-Cuisson du plat & UC & \\
-Cuisinier&Acteur&\\
-Ajout des produits&UC&\\
-Emballage des produits&UC&\\
-Préparateur&Acteur&\\
-Terminal & Classe&\\
-Demander de l'aide sur une préparation&UC&\\
-Ingrédients&Classe&\\
-Signaler si un ingrédient commence à manquer&UC&\\
-Signaler le début de la préparation&UC&\\
-Signaler la fin de la préparation&UC&\\
-Mettre une commande en attente&UC&\\
-Annuler une commande&UC&\\
-Système&Acteur&Aussi administrateur du SI\\
-Afficher l'ordre des commandes&UC&\\
-Localiser les produits dans le stock&UC&\\
-Stock & Classe &\\
-Avertir le manager ou le réceptionniste&UC&\\
-Manager&Classe&\\
-Réceptionniste&Classe&\\
-Réceptionniste&Acteur&\\
-Contacter le client&UC&\\
-Client &Classe&\\
-Modifier la commande&UC&\\
-Gérer l'ordonnancement&UC&\\
-Gérer la répartition des commandes&UC&\\
-Planifier commande&UC&\\
-Soumettre une commande à un cuisinier&UC&\\
-Avertir le client par courriel&UC&\\
-Imprimer la commande&UC&\\
-Attacher l'impression à la pizza&UC&\\
-Avertir le livreur&UC&\\
-Livreur&Acteur&\\
-Consulter l'état de la préparation&UC&\\
-Manager&Acteur&\\
-Client&Acteur&\\
-\hline
-\end{tabular}
+Le préparateur quant à lui ajoute à une commande les articles ne nécessitant pas de cuisson et ensuite emballe tous les articles. Il doit lui aussi respecter les étapes de gestion d'une commande et peut signaler un article en passe d'être en rupture de stock.
 
-\subsection{Glossaire}
-\begin{tabular}{|c|c|c|}
-\hline
-Terme&Définition&Auteur\\
-\hline
- \multirow{2}{*}{Préparation d'une commande}&Confection et cuisson des plats &  \multirow{2}{*}{BVR+FL}\\
-&puis ajout des autre produits et emballage&\\
-Préparateur&Personne préparant les commandes& BVR+FL\\
-Manager&Responsable 	du personnel& BVR+FL\\
-Réceptionniste&Employé chargé de l'accueil client& BVR+FL\\
-Livreur& Personne en charge des livraisons&BVR+FL\\
-\hline
-\end{tabular}
+Le livreur doit aussi respecter les étapes de sa livraison, incluant le fait de signaler son départ, son arrivé, ou tout incident parvenant sur la route.
 
-\section{Livraison}
-\subsection{Tableau préparatoire}
-\begin{tabular}{|c|c|c|}
-\hline
-Concept & Type & Definition\\
-\hline
-Restaurant&Classe&\\
-Livreur&Classe&\\
-Commande&Classe&\\
-Terminal&Classe&\\
-Livreur&Acteur&\\
-Transporter des commandes&UC&\\
-Prendre en charge une commande&UC&\\
-Signaler la prise en charge&UC&\\
-Terminal&Acteur&\\
-Donner informations clients&UC&\\
-Donner la position du livreur&UC&\\
-Manager&Acteur&\\
-Standardiste&Acteur&\\
-Connaitre les positions des livreurs&UC&\\
-Client&Acteur&\\
-Savoir si le livreur est en approche&UC&\\
-Signaler un danger&UC&\\
-Envoyer message d'alerte&UC&\\
-Message d'alerte&Classe&\\
-\hline
-\end{tabular}
+De plus chaque client ainsi que le manager peuvent consulter les commandes en cours, même si un client ne peut voir que les commandes le concernant.
+Le manager peut , ainsi que les réceptionniste, contacter un client en cas de problème.
 
-\subsection{Glossaire}
-\begin{tabular}{|c|c|c|}
-\hline
-Terme&Définition&Auteur\\
-\hline
-GPS&Global Positioning System&BVR+FL\\
-Simultanément&En un seul voyage&BVR+FL\\
-"En approche"&Signifie que la commande a été prise en charge par le livreur&BVR+FL\\
-\hline
-\end{tabular}
+Pour finir, le système gère l'ordonnancement des commandes a traiter ainsi que la répartition des commandes entre les livreurs.
 
-\section{Manager}
-\subsection{Tableau préparatoire}
-\begin{tabular}{|c|c|c|}
-\hline
-Concept & Type & Definition\\
-\hline
-Manager&Acteur&\\
-Fixer les emplois du temps&UC&\\
-Désigner les responsables sécurités&UC&\\
-Visualiser les statistiques&UC&\\
-Visualiser l'état des stocks&UC&\\
-Visualiser la présence des employés&UC&\\
-Visualiser la position d'un livreur&UC&\\
-Visualiser les commandes d'un livreur&UC&\\
-\hline
-\end{tabular}
+\begin{figure}[h!]
+\begin{center}
+     \includegraphics[width=15cm]{figures/uc_preparation}
+\end{center}
+\caption{Cas d'utilisation: Préparation}
+\end{figure}
 
-\section{Responsable sécurité}
-\subsection{Tableau préparatoire}
-\begin{tabular}{|c|c|c|}
-\hline
-Concept & Type & Definition\\
-\hline
-Collaborateur&Classe&\\
-Désigner comme responsable sécurité&UC&\\
-Recevoir message de sécurité&UC&\\
-Message de sécurité&Classe&\\
-Livreur&Classe&\\
-Responsable sécurité& Acteur&\\
-Consulter message&UC&\\
-Visualiser position du livreur&UC&\\
-Prendre connaissance du numéro de téléphone du livreur&UC&\\
-Application&Acteur&\\
-Montrer les informations nécessaires&UC&\\ 
-Manager&Acteur&\\
-\hline
-\end{tabular}
+\subsubsection{Livraison}
 
-\subsection{Glossaire}
-\begin{tabular}{|c|c|c|}
-\hline
-Terme&Définition&Auteur\\
-\hline
-\multirow{2}{*}{Responsable sécurité}&Personne charger de s'assurer de la sécurité &\multirow{2}{*}{BVR+FL}\\
-&du personnel. Peut être n'importe quel employé&\\
-\hline
-\end{tabular}
+Pour effectuer une livraison Le livreur est en charge d'effectuer celle-ci. 
+Il peut aussi consulter son terminal pour récupérer les informations du client.
 
-\section{Responsable sécurité}
-\subsection{Tableau préparatoire}
-\begin{tabular}{|c|c|c|}
-\hline
-Concept & Type & Definition\\
-\hline
-Application&Acteur&\\
-Gérer les heures de présence&UC&\\
-Collaborateur&Acteur&\\
-Se connecter à l'application &UC&\\
-Signaler prise de service&UC&\\
-Signaler fin de service&UC&\\
-Visualiser les heures effectives&UC&\\
-Manager&Acteur&\\
-\hline
-\end{tabular}
-
-\subsection{Glossaire}
-\begin{tabular}{|c|c|c|}
-\hline
-Terme&Définition&Auteur\\
-\hline
-Heures effectives&Horaires réellement effectués par un employé &BVR+FL\\
-\hline
-\end{tabular}
+Les terminaux permettent aux managers et aux standardistes de savoir ou se situe les livreurs afin d'informer le client de l'avancement de leurs commandes.
 
 
-\signature[François \bsc{Lepan}\\Benjamin \bsc{Van Ryseghem}]
+\begin{figure}[h!]
+\begin{center}
+     \includegraphics[width=15cm]{figures/uc_livraison}
+\end{center}
+\caption{Cas d'utilisation: Livraison}
+\end{figure}
+
+\subsubsection{Application et personnel}
+
+\paragraph{Manager}
+Le manager est en charge de fixer les emplois du temps ainsi que désigner les responsables sécurité. Il peut aussi visualiser diverses informations sur ses employer ainsi que les stocks disponibles.
+
+
+\paragraph{Responsable sécurité}
+Il est désigné par le manager. Il doit s'occuper de tout ce qui est message reçu des livreur en rapport avec un quelconque problème et agir en conséquence. 
+
+
+\paragraph{Autre}
+L'application doit permettre de connaitre les heures de présences des employés. Pour cela le collaborateur se connecte a celle-ci a son arrivé et se déconnecte ? la fin de service.
+
+
+\begin{figure}[h!]
+\begin{center}
+     \includegraphics[width=15cm]{figures/uc_manager}
+\end{center}
+\caption{Cas d'utilisation: Manager}
+\end{figure}
+\begin{figure}[h!]
+\begin{center}
+     \includegraphics[width=15cm]{figures/uc_responsable-securite}
+\end{center}
+\caption{Cas d'utilisation: Responsable sécurité}
+\end{figure}
+\begin{figure}[h!]
+\begin{center}
+     \includegraphics[width=15cm]{figures/uc_autre}
+\end{center}
+\caption{Cas d'utilisation: Autre}
+\end{figure}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\begin{appendices} 
+\chapter{Diagrammes de classes} 
+\begin{figure}[h!]
+\begin{center}
+     \includegraphics[width=20cm,angle=90]{figures/cd_commande}
+\end{center}
+\caption{Diagramme de classes: Commande}
+\end{figure}
+\begin{figure}[h!]
+\begin{center}
+     \includegraphics[width=15cm]{figures/cd_preparation}
+\end{center}
+\caption{Diagramme de classes: Préparation}
+\end{figure}
+\begin{figure}[h!]
+\begin{center}
+     \includegraphics[width=15cm]{figures/cd_livraison}
+\end{center}
+\caption{Diagramme de classes: Livraison}
+\end{figure}
+\begin{figure}[h!]
+\begin{center}
+     \includegraphics[width=15cm]{figures/cd_responsable_securite}
+\end{center}
+\caption{Diagramme de classes: Responsable sécurité}
+\end{figure}
+\end{appendices} 
+
+%
+%\section{Prise de Commande}
+%\subsection{Tableau préparatoire}
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Concept & Type & Definition\\
+%\hline
+%Client & Acteur & \\
+%Consulter les offres & UC & \\
+%Ajouter au panier & UC & \\
+%Finaliser commande & UC & (Récapitulation + Paiement)\\
+%Coordonnées client & Classe & \\
+%Envoyer mail de confirmation & UC & \\
+%Site & Acteur & Administrateur \\
+%Créer un profil & UC & \\
+%Connection au profil & UC & \\
+%Avantage & Classe & (Point de fidélité + offres promotionnelles)\\
+%Paiement rapide & UC & Si utilisateur enregistré\\
+%Mémoriser commandes & UC & \\
+%Commande & Classe & \\
+%Créditer des points & UC & \\
+%Article&Classe&ou Produit\\
+%Manager & Acteur& \\
+%Fixer le nombre de point par article & UC &\\
+%Restaurant & Classe & \\
+%Offre & Classe&\\
+%Descriptif&Classe&\\
+%Format&Classe&\\
+%Menu&Classe&\\
+%Commander des articles&UC&\\
+%Maintenance et mise à jour du site&UC&\\
+%Commander par téléphone&UC&\\
+%Commander au comptoir&UC&\\
+%Standardiste&Acteur&\\
+%Calculer l'heure probable & \multirow{2}{*}{UC}&\\
+%à laquelle la commande sera prête&&\\
+%Calculer le temps probable & \multirow{2}{*}{UC}&\\
+%nécessaire à la livraison&&\\
+%Vérifier disponibilité livreur&UC&\\
+%Proposer un horaire de livraison&UC&\\
+%Renoncer à la commande&UC&\\
+%Proposer un horaire plus tard&UC&\\
+%Gérer le lancement d'une commande&UC&\\
+%\hline
+%\end{tabular}
+%
+%\subsection{Glossaire}
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Terme&Définition&Auteur\\
+%\hline
+%Client& Personne souhaitant commander dans le restaurant& BVR+FL\\
+%Offre&Ensemble des articles commandables& BVR+FL\\
+%Panier&Ensemble des articles  qu'un client souhaite commander& BVR+FL\\
+%Commande&Contenu final d'un panier& BVR+FL\\
+%Profil&Ensemble des informations relatives à un client& BVR+FL\\
+%Avantages&Bénéfice fournit à un client connecté& BVR+FL\\
+%Payement rapide&Payement effectué sans avoir à refournir les coordonnées& BVR+FL\\
+%Menu&Ensemble d'articles hors menu& BVR+FL\\
+%Standardiste&Personne en charge des appels téléphonique& BVR+FL\\
+%Livreur&Personne effectuant une livraison& BVR+FL\\
+%Préparateur&Personne préparant des commandes& BVR+FL\\
+%\hline
+%\end{tabular}
+%
+%\section{Préparation des commandes}
+%\subsection{Tableau préparatoire}
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Concept & Type & Definition\\
+%\hline
+%Commande & Classe & \\
+%Confection du plat & UC & \\
+%Cuisson du plat & UC & \\
+%Cuisinier&Acteur&\\
+%Ajout des produits&UC&\\
+%Emballage des produits&UC&\\
+%Préparateur&Acteur&\\
+%Terminal & Classe&\\
+%Demander de l'aide sur une préparation&UC&\\
+%Ingrédients&Classe&\\
+%Signaler si un ingrédient commence à manquer&UC&\\
+%Signaler le début de la préparation&UC&\\
+%Signaler la fin de la préparation&UC&\\
+%Mettre une commande en attente&UC&\\
+%Annuler une commande&UC&\\
+%Système&Acteur&Aussi administrateur du SI\\
+%Afficher l'ordre des commandes&UC&\\
+%Localiser les produits dans le stock&UC&\\
+%Stock & Classe &\\
+%Avertir le manager ou le réceptionniste&UC&\\
+%Manager&Classe&\\
+%Réceptionniste&Classe&\\
+%Réceptionniste&Acteur&\\
+%Contacter le client&UC&\\
+%Client &Classe&\\
+%Modifier la commande&UC&\\
+%Gérer l'ordonnancement&UC&\\
+%Gérer la répartition des commandes&UC&\\
+%Planifier commande&UC&\\
+%Soumettre une commande à un cuisinier&UC&\\
+%Avertir le client par courriel&UC&\\
+%Imprimer la commande&UC&\\
+%Attacher l'impression à la pizza&UC&\\
+%Avertir le livreur&UC&\\
+%Livreur&Acteur&\\
+%Consulter l'état de la préparation&UC&\\
+%Manager&Acteur&\\
+%Client&Acteur&\\
+%\hline
+%\end{tabular}
+%
+%\subsection{Glossaire}
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Terme&Définition&Auteur\\
+%\hline
+% \multirow{2}{*}{Préparation d'une commande}&Confection et cuisson des plats &  \multirow{2}{*}{BVR+FL}\\
+%&puis ajout des autre produits et emballage&\\
+%Préparateur&Personne préparant les commandes& BVR+FL\\
+%Manager&Responsable 	du personnel& BVR+FL\\
+%Réceptionniste&Employé chargé de l'accueil client& BVR+FL\\
+%Livreur& Personne en charge des livraisons&BVR+FL\\
+%\hline
+%\end{tabular}
+%
+%\section{Livraison}
+%\subsection{Tableau préparatoire}
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Concept & Type & Definition\\
+%\hline
+%Restaurant&Classe&\\
+%Livreur&Classe&\\
+%Commande&Classe&\\
+%Terminal&Classe&\\
+%Livreur&Acteur&\\
+%Transporter des commandes&UC&\\
+%Prendre en charge une commande&UC&\\
+%Signaler la prise en charge&UC&\\
+%Terminal&Acteur&\\
+%Donner informations clients&UC&\\
+%Donner la position du livreur&UC&\\
+%Manager&Acteur&\\
+%Standardiste&Acteur&\\
+%Connaitre les positions des livreurs&UC&\\
+%Client&Acteur&\\
+%Savoir si le livreur est en approche&UC&\\
+%Signaler un danger&UC&\\
+%Envoyer message d'alerte&UC&\\
+%Message d'alerte&Classe&\\
+%\hline
+%\end{tabular}
+%
+%\subsection{Glossaire}
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Terme&Définition&Auteur\\
+%\hline
+%GPS&Global Positioning System&BVR+FL\\
+%Simultanément&En un seul voyage&BVR+FL\\
+%"En approche"&Signifie que la commande a été prise en charge par le livreur&BVR+FL\\
+%\hline
+%\end{tabular}
+%
+%\section{Manager}
+%\subsection{Tableau préparatoire}
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Concept & Type & Definition\\
+%\hline
+%Manager&Acteur&\\
+%Fixer les emplois du temps&UC&\\
+%Désigner les responsables sécurités&UC&\\
+%Visualiser les statistiques&UC&\\
+%Visualiser l'état des stocks&UC&\\
+%Visualiser la présence des employés&UC&\\
+%Visualiser la position d'un livreur&UC&\\
+%Visualiser les commandes d'un livreur&UC&\\
+%\hline
+%\end{tabular}
+%
+%\section{Responsable sécurité}
+%\subsection{Tableau préparatoire}
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Concept & Type & Definition\\
+%\hline
+%Collaborateur&Classe&\\
+%Désigner comme responsable sécurité&UC&\\
+%Recevoir message de sécurité&UC&\\
+%Message de sécurité&Classe&\\
+%Livreur&Classe&\\
+%Responsable sécurité& Acteur&\\
+%Consulter message&UC&\\
+%Visualiser position du livreur&UC&\\
+%Prendre connaissance du numéro de téléphone du livreur&UC&\\
+%Application&Acteur&\\
+%Montrer les informations nécessaires&UC&\\ 
+%Manager&Acteur&\\
+%\hline
+%\end{tabular}
+%
+%\subsection{Glossaire}
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Terme&Définition&Auteur\\
+%\hline
+%\multirow{2}{*}{Responsable sécurité}&Personne charger de s'assurer de la sécurité &\multirow{2}{*}{BVR+FL}\\
+%&du personnel. Peut être n'importe quel employé&\\
+%\hline
+%\end{tabular}
+%
+%\section{Responsable sécurité}
+%\subsection{Tableau préparatoire}
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Concept & Type & Definition\\
+%\hline
+%Application&Acteur&\\
+%Gérer les heures de présence&UC&\\
+%Collaborateur&Acteur&\\
+%Se connecter à l'application &UC&\\
+%Signaler prise de service&UC&\\
+%Signaler fin de service&UC&\\
+%Visualiser les heures effectives&UC&\\
+%Manager&Acteur&\\
+%\hline
+%\end{tabular}
+%
+%\subsection{Glossaire}
+%\begin{tabular}{|c|c|c|}
+%\hline
+%Terme&Définition&Auteur\\
+%\hline
+%Heures effectives&Horaires réellement effectués par un employé &BVR+FL\\
+%\hline
+%\end{tabular}
+
+\signature
+
 
 \end{document}

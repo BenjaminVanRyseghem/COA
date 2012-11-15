@@ -4,6 +4,19 @@
 \usepackage[toc,page]{appendix} 
 
 
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\makeatletter
+\newcounter {subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection .\@arabic \c@subsubsubsection}
+\newcommand\subsubsubsection{\@startsection{subsubsubsection}{4}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+\newcommand*\l@subsubsubsection{\@dottedtocline{3}{10.0em}{4.1em}}
+\newcommand*{\subsubsubsectionmark}[1]{}
+\makeatother
+
 \newcommand\entete{\begin{tabular}{|c|c|c|c|}
 \hline
 MASTER 1\up{ère} Année&Titre du Document&22 Octobre 2012&Version 1.0\\
@@ -15,11 +28,28 @@ Benjamin \bsc{Van Ryseghem}&&\multicolumn{2}{c|}{}\\
 \end{tabular}}
 
 
+\newcommand\cu[1]{\paragraph*{\textcolor{red}{Cas d'utilisation : }} #1}
+\newcommand\acteur[1]{\paragraph*{\textcolor{red}{Acteur : }} #1}
+\newcommand\pre{\paragraph*{\textcolor{blue}{Pré-condition : }}\mbox{}
+
+}
+\newcommand\der{\paragraph*{\textcolor{blue}{Déroulement principale :}}\mbox{}
+
+}
+\newcommand\post{\paragraph*{\textcolor{blue}{Post-condition : }}\mbox{}
+
+}
+
+
 \author{François \bsc{Lepan}\\Benjamin \bsc{Van Ryseghem}}
 \begin{document}
 
 
 \entete
+\vfill
+\tableofcontents
+\vfill
+\newpage
 \section*{Révisions}
 \begin{tabular}{|c|c|c|c|}
 \hline
@@ -74,7 +104,7 @@ Heures effectives&Horaires réellement effectués par un employé &BVR+FL\\
 Ces cas d'utilisation regroupent les trois principales fonctionnalités fournis par le service: (1) la commande d'articles, (2) leur préparation et (3) leur livraison.
 
 
-\begin{figure}[h!]
+\begin{figure}[!h]
 \begin{center}
      \includegraphics[width=15cm]{figures/uc_commande}
 \end{center}
@@ -121,8 +151,8 @@ Ces cas d'utilisation regroupent les trois principales fonctionnalités fournis p
 \mbox{}
 
 \vspace{10cm}
-
-\subsubsection{Commande}
+\subsubsection{Cas d'utilisation}
+\subsubsubsection{Commande}
 
 Ce diagramme de cas d'utilisation représente les actions lié a la commande d'un produit.
 On peut voir sur la figure~\ref{fig:commande} qu'un client ou qu'une standardiste peut passer une commande.
@@ -137,7 +167,7 @@ De plus, il apparait que le manager est quant à lui responsable de l'attribution
 \label{fig:commande}
 \end{figure}
 
-\subsubsection{Préparation}
+\subsubsubsection{Préparation}
 Ce cas d'utilisation introduit les différents scénarii ainsi que les différents acteurs impliqués dans la préparation d'une commande.
 Les préparations proprement dites sont gérées par trois acteurs: (1) le cuisinier, (2) le préparateur et (3) et le livreur.
 
@@ -159,7 +189,7 @@ Pour finir, le système gère l'ordonnancement des commandes a traiter ainsi que l
 \caption{Cas d'utilisation: Préparation}
 \end{figure}
 
-\subsubsection{Livraison}
+\subsubsubsection{Livraison}
 
 Pour effectuer une livraison Le livreur est en charge d'effectuer celle-ci. 
 Il peut aussi consulter son terminal pour récupérer les informations du client.
@@ -174,17 +204,17 @@ Les terminaux permettent aux managers et aux standardistes de savoir ou se situe
 \caption{Cas d'utilisation: Livraison}
 \end{figure}
 
-\subsubsection{Application et personnel}
+\subsubsubsection{Application et personnel}
 
-\paragraph{Manager}
+\paragraph*{Manager}
 Le manager est en charge de fixer les emplois du temps ainsi que désigner les responsables sécurité. Il peut aussi visualiser diverses informations sur ses employer ainsi que les stocks disponibles.
 
 
-\paragraph{Responsable sécurité}
+\paragraph*{Responsable sécurité}
 Il est désigné par le manager. Il doit s'occuper de tout ce qui est message reçu des livreur en rapport avec un quelconque problème et agir en conséquence. 
 
 
-\paragraph{Autre}
+\paragraph*{Autre}
 L'application doit permettre de connaitre les heures de présences des employés. Pour cela le collaborateur se connecte a celle-ci a son arrivé et se déconnecte ? la fin de service.
 
 
@@ -207,19 +237,502 @@ L'application doit permettre de connaitre les heures de présences des employés. 
 \caption{Cas d'utilisation: Autre}
 \end{figure}
 
-\mbox{}
 
 \mbox{}
 
 \mbox{}
 
 \mbox{}
+
+\mbox{}\mbox{}
+
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}\mbox{}
+
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}\mbox{}\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}\mbox{}
+
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}\mbox{}
+
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}\mbox{}
+
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}\mbox{}
+
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}\mbox{}
+
+
+\mbox{}\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}\mbox{}
+
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}\mbox{}
+
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}\mbox{}
+
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}\mbox{}
+
+
+\mbox{}
+
+\mbox{}
+\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}\mbox{}
+
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}\mbox{}
+
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}
+
+\mbox{}\mbox{}
+\mbox{}
+
+\mbox{}\mbox{}
+
+
+\mbox{}
+
+
+
+
+
+\mbox{}
+\newpage
+\subsubsection{Scénarios}
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+CU & MOA & MOE & Moyenne \\
+\hline
+Consulter offre &&5&\\
+Création de profil  &&3&\\
+Commander  &&5&\\
+Payer Commande &&4&\\
+Créditer points &&1&\\
+Payer la commande &&5&\\
+Proposer un horaire &&3.5&\\
+Renoncer à la commande &&2&\\
+Fixer le nombre de points de fidélité &&2&\\
+Cuisson &&5&\\
+Gérer Commande &&4&\\
+Ajout de produits &&4&\\
+Emballage &&3&\\
+Consulter progression Commande &&2&\\
+Contacter client en cas de problème &&4&\\
+Modifier commande &&4&\\
+Transporter des commandes &&4&\\
+Prendre en charge une commande &&3&\\
+Signaler un danger &&2&\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsubsubsection{Scénario : Autre}
+
+\cu{Signaler prise de service}
+\acteur{Collaborateur}
+\pre
+Aucune.
+\der
+Le collaborateur se connecte à l'application et signale sa prise de service.
+\post
+Aucune.
+
+\cu{Signaler la fin service}
+\acteur{Collaborateur}
+\pre
+Aucune.
+\der
+Le collaborateur se connecte à l'application et signale la fin de son service.
+\post
+Aucune.
+
+\cu{Visualiser les heures effectives des collaborateurs.}
+\acteur{Manager}
+\pre
+Aucune.
+\der
+Le Manager se connecte à l'application et se renseigne sur les heures effectives de ses employés.
+\post
+Aucune.
+
+
+%%%%%%%%%%%%%%%%%%%%
+%% 											rajouter post condition
+%%%%%%%%%%%%%%%%%%%%
+\subsubsubsection{Scénario : Livraison}
+
+
+\cu{Transporter des commandes}
+\acteur{Livreur}
+\pre
+Une commande prête
+L'adresse du client
+\der
+Le Livreur récupère la commande.
+Il se connecte à son terminale et signale la prise en charge de la commande.
+Il se dirige a l'adresse d'expédition de la future commande
+Si il rencontre un danger : 
+	il le signale via son terminal
+Il fait sa livraison et il rentre à la pizzeria.
+\post
+Aucune.
+
+
+%%%%%%%%%%%%%%%%%%%%
+\subsubsubsection{Scénario : Manager}
+
+
+\cu{Fixer les emplois du temps}
+\acteur{Manager}
+\pre
+Connaitre les congés et les contrats de ses employés.
+\der
+Le Manager se connecte à l'application et fixe les emploi du temps de ses employés en fonction 
+de leurs congés et contrat.
+\post
+Les emplois du temps sont fixés.
+
+\cu{Désigner les responsables sécurités.}
+\acteur{Manager}
+\pre
+Aucune.
+\der
+Le Manager se connecte à l'application et choisi les nouveaux responsable sécurité en faisant 
+attention de donner ce rôle le plus équitablement possible. Pour ce faire il donne le droit de 
+consulter certaines informations le temps du mandat du responsable sécurité.
+\post
+Les nouveaux responsables sécurité sont désignés.
+
+\cu{Visualiser des informations concernant la pizzeria et les employés}
+\acteur{Manager}
+\pre
+Aucune.
+\der
+Le Manager se connecte à l'application et regarde les informations dont il a besoin comme 
+les commandes en cours, l'état des stocks, la présence des employés, etc.
+\post
+Aucune.
+
+
+%%%%%%%%%%%%%%%%%%%%
+\subsubsubsection{Scénario : Responsable sécurité}
+
+\cu{Obtenir divers informations concernants les livreurs}
+\acteur{Responsable sécurité}
+\pre
+Être désigné comme responsable sécurité.
+\der
+Le Responsable sécurité se connecte à l'application et prend connaissance des informations 
+dont il a besoin comme le numéro de téléphone ou la position des livreurs.
+Si il reçoit un message d'alerte d'un des livreurs il le consulte et fait part du problème 
+à ses supérieurs.
+\post Un message a été envoyé à son responsable si une erreur est intervenue.
+
+%%%%%%%%%%%%%%%%%%%%
+\subsubsubsection{Scénario : Commande}
+
+\cu{Consulter les offres}
+
+\acteur{Standardiste et client}
+
+\pre
+
+Du point de vue du standardiste : 
+	Un client est venu commander sur place.
+Du point de vue du client : 
+	Se connecter au site du restaurant.
+	
+\der
+
+Du point de vue du standardiste :
+	Le client arrive pour commander et il demande les offres disponibles.
+	Le standardiste regarde alors sur l'application les offres disponibles et les propose au client.
+Du point de vue du client : 
+	Le client se connecte au site du restaurant et regarde les offres disponibles.
+\post
+Le client connait les offres du restaurant.
+
+\cu{Création de profil}
+
+\acteur{Standardiste et client}
+
+\pre
+Du point de vue du standardiste :
+	Un client est venu sur place pour créer un profil.
+Du point de vue du client :
+	Se connecter au site du restaurant pour créer un profil.
+	
+\der
+
+Du point de vue du standardiste :
+	Le client arrive pour commander et il demande de créer un profil.
+	Le standardiste créé alors un profil pour ce client.
+Du point de vue du client : 
+
+	Le client se connecte au site du restaurant et se créé un profil.
+	
+\post
+
+Le client possède alors un profil pour ce restaurant.
+
+
+\cu{Commander}
+
+\acteur{Standardiste et client}
+
+\pre
+Du point de vue du standardiste :
+	Un client est venu sur place pour commander.
+Du point de vue du client :
+	Se connecter au site du restaurant pour commander.
+	
+\der
+
+Du point de vue du standardiste :
+	Le client arrive sur place ou il téléphone pour commander.
+	Si le client possède un profil le standardiste accède au profil du client pour récupérer l'adresse de celui-ci. Sinon, il lui demande l'adresse de livraison.			
+	Il récupère la commande de celui-ci.
+	Le client paye la commande en carte bancaire sur place ou lors de la livraison si il a téléphoné.
+	Le standardiste propose un horaire pour la livraison.
+	Tant que l'horaire ne convient pas au client, le standardiste propose un autre horaire.
+	À tout moment le client peut aussi renoncer à la commande.
+	Si il renonce à la commande, la commande est annulé. Sinon la commande est validé.
+	 
+Du point de vue du client : 
+	Le client se connecte au site du restaurant.
+	Il passe sa commande.
+	Si il possède un profil il se connecte a celui-ci afin de fournir une adresse de livraison. Sinon il doit rentrer ces informations.
+	Le client paye sa commande soit par carte bancaire soit via Paypal.
+	Le site propose alors plusieurs horaires.
+	Le client choisi l'horaire qui lui convient le mieux si il y en à un. La commande est alors validé. Sinon il peut renoncer à la commande.
+	Si la commande est validée le site envoie un mail à ce client récapitulant la commande.
+	
+\post
+Le client reçoit sa commande.
+Si le client possède un profil on lui crédite des points.
+
+\cu{Fixer le nombre de point de fidélité}
+
+\acteur{Manager}
+
+\pre
+
+Un nouveau produit est arrivé.
+Une mise a jour du système de point de fidélité.
+
+\der
+Le manager se connecte à l'application et fixe le nouveau nombre de point de fidélité du ou des produit(s) concernés.
+	
+\post
+Aucune.
+
+
+%%%%%%%%%%%%%%%%%%%%
+\subsubsubsection{Scénario : Préparation}
+
+\cu{Cuisson}
+
+\acteur{Cuisinier}
+
+\pre
+Une ou plusieurs commandes sont effectuées par un ou plusieurs clients.
+
+\der
+
+Le cuisinier consulte son terminal.
+Le cuisinier signale la prise en charge d'une commande sur son terminal.
+Il la prépare.
+Si il a besoin d'aide il peut en demander a un des préparateur.
+Si il ne peut pas préparer la commande il le signale et la commande est alors annulée.
+Si un ingrédient viens à manquer il le signale sur son terminal.
+Il signale la terminaison de cette  commande et prend en charge la suivante si il y en a une.
+
+\post
+La commande est préparée et prête à être envoyée.
+
+	
+\cu{Gérer une commande}
+
+\acteur{Livreur}
+
+\pre
+
+Une ou plusieurs commandes sont effectuées par un ou plusieurs clients.
+
+\der
+
+Il prend en charge les commandes dans l'ordre.
+Si il ne peut pas préparer la commande il le signale et la commande est alors annulée.
+Si un ingrédient viens à manquer il le signale sur son terminal.
+Il signale la terminaison de cette  commande et prend en charge la suivante si il y en a une.
+
+\post
+La commande est préparée et prête à être envoyée.
+
+
+\cu{Gérer une commande}
+
+\acteur{Livreur}
+
+\pre
+
+Une ou plusieurs commandes sont effectuées par un ou plusieurs clients.
+
+\der
+
+Il prend en charge les commandes dans l'ordre.
+Pour ce faire il ajoute les produits signaler par son terminal et effectue l'emballage de ceux demandé.
+Si il ne peut pas préparer la commande il le signale et la commande est alors annulée.
+Si un ingrédient viens à manquer il le signale sur son terminal.
+Il signale la terminaison de cette  commande et prend en charge la suivante si il y en a une.
+
+\post
+La commande est préparée et prête à être envoyée.
+
+
+\cu{Consulter la progression d'une commande}
+
+\acteur{Client}
+
+\pre
+
+Avoir effectuer une commande et posséder un compte sur le site.
+
+\der
+
+Le client se connecte sur son profil et consulte la progression en cours de sa commande.
+
+\post
+Aucune.
+
+
+\cu{Contacter le client en cas de problème}
+
+\acteur{Manager et réceptionniste}
+
+\pre
+
+Qu'il y ai un problème avec une commande signalé par un préparateur ou un cuisinier.
+
+\der
+
+Le manager ou le réceptionniste contacte le client concerné par la commande et lui propose de modifier sa commande.
+
+\post
+La commande est modifiée.
+
+
+
+
+
+
+
+
+
+
+
+\newpage
 
 \begin{appendices} 
-\chapter{Diagrammes de classes} 
-\begin{figure}[h!]
+\begin{figure}[ht]
 \begin{center}
-     \includegraphics[width=20cm,angle=90]{figures/cd_commande}
+     \includegraphics[width=15cm,angle=90]{figures/cd_commande}
 \end{center}
 \caption{Diagramme de classes: Commande}
 \end{figure}
@@ -243,244 +756,7 @@ L'application doit permettre de connaitre les heures de présences des employés. 
 \end{figure}
 \end{appendices} 
 
-%
-%\section{Prise de Commande}
-%\subsection{Tableau préparatoire}
-%\begin{tabular}{|c|c|c|}
-%\hline
-%Concept & Type & Definition\\
-%\hline
-%Client & Acteur & \\
-%Consulter les offres & UC & \\
-%Ajouter au panier & UC & \\
-%Finaliser commande & UC & (Récapitulation + Paiement)\\
-%Coordonnées client & Classe & \\
-%Envoyer mail de confirmation & UC & \\
-%Site & Acteur & Administrateur \\
-%Créer un profil & UC & \\
-%Connection au profil & UC & \\
-%Avantage & Classe & (Point de fidélité + offres promotionnelles)\\
-%Paiement rapide & UC & Si utilisateur enregistré\\
-%Mémoriser commandes & UC & \\
-%Commande & Classe & \\
-%Créditer des points & UC & \\
-%Article&Classe&ou Produit\\
-%Manager & Acteur& \\
-%Fixer le nombre de point par article & UC &\\
-%Restaurant & Classe & \\
-%Offre & Classe&\\
-%Descriptif&Classe&\\
-%Format&Classe&\\
-%Menu&Classe&\\
-%Commander des articles&UC&\\
-%Maintenance et mise à jour du site&UC&\\
-%Commander par téléphone&UC&\\
-%Commander au comptoir&UC&\\
-%Standardiste&Acteur&\\
-%Calculer l'heure probable & \multirow{2}{*}{UC}&\\
-%à laquelle la commande sera prête&&\\
-%Calculer le temps probable & \multirow{2}{*}{UC}&\\
-%nécessaire à la livraison&&\\
-%Vérifier disponibilité livreur&UC&\\
-%Proposer un horaire de livraison&UC&\\
-%Renoncer à la commande&UC&\\
-%Proposer un horaire plus tard&UC&\\
-%Gérer le lancement d'une commande&UC&\\
-%\hline
-%\end{tabular}
-%
-%\subsection{Glossaire}
-%\begin{tabular}{|c|c|c|}
-%\hline
-%Terme&Définition&Auteur\\
-%\hline
-%Client& Personne souhaitant commander dans le restaurant& BVR+FL\\
-%Offre&Ensemble des articles commandables& BVR+FL\\
-%Panier&Ensemble des articles  qu'un client souhaite commander& BVR+FL\\
-%Commande&Contenu final d'un panier& BVR+FL\\
-%Profil&Ensemble des informations relatives à un client& BVR+FL\\
-%Avantages&Bénéfice fournit à un client connecté& BVR+FL\\
-%Payement rapide&Payement effectué sans avoir à refournir les coordonnées& BVR+FL\\
-%Menu&Ensemble d'articles hors menu& BVR+FL\\
-%Standardiste&Personne en charge des appels téléphonique& BVR+FL\\
-%Livreur&Personne effectuant une livraison& BVR+FL\\
-%Préparateur&Personne préparant des commandes& BVR+FL\\
-%\hline
-%\end{tabular}
-%
-%\section{Préparation des commandes}
-%\subsection{Tableau préparatoire}
-%\begin{tabular}{|c|c|c|}
-%\hline
-%Concept & Type & Definition\\
-%\hline
-%Commande & Classe & \\
-%Confection du plat & UC & \\
-%Cuisson du plat & UC & \\
-%Cuisinier&Acteur&\\
-%Ajout des produits&UC&\\
-%Emballage des produits&UC&\\
-%Préparateur&Acteur&\\
-%Terminal & Classe&\\
-%Demander de l'aide sur une préparation&UC&\\
-%Ingrédients&Classe&\\
-%Signaler si un ingrédient commence à manquer&UC&\\
-%Signaler le début de la préparation&UC&\\
-%Signaler la fin de la préparation&UC&\\
-%Mettre une commande en attente&UC&\\
-%Annuler une commande&UC&\\
-%Système&Acteur&Aussi administrateur du SI\\
-%Afficher l'ordre des commandes&UC&\\
-%Localiser les produits dans le stock&UC&\\
-%Stock & Classe &\\
-%Avertir le manager ou le réceptionniste&UC&\\
-%Manager&Classe&\\
-%Réceptionniste&Classe&\\
-%Réceptionniste&Acteur&\\
-%Contacter le client&UC&\\
-%Client &Classe&\\
-%Modifier la commande&UC&\\
-%Gérer l'ordonnancement&UC&\\
-%Gérer la répartition des commandes&UC&\\
-%Planifier commande&UC&\\
-%Soumettre une commande à un cuisinier&UC&\\
-%Avertir le client par courriel&UC&\\
-%Imprimer la commande&UC&\\
-%Attacher l'impression à la pizza&UC&\\
-%Avertir le livreur&UC&\\
-%Livreur&Acteur&\\
-%Consulter l'état de la préparation&UC&\\
-%Manager&Acteur&\\
-%Client&Acteur&\\
-%\hline
-%\end{tabular}
-%
-%\subsection{Glossaire}
-%\begin{tabular}{|c|c|c|}
-%\hline
-%Terme&Définition&Auteur\\
-%\hline
-% \multirow{2}{*}{Préparation d'une commande}&Confection et cuisson des plats &  \multirow{2}{*}{BVR+FL}\\
-%&puis ajout des autre produits et emballage&\\
-%Préparateur&Personne préparant les commandes& BVR+FL\\
-%Manager&Responsable 	du personnel& BVR+FL\\
-%Réceptionniste&Employé chargé de l'accueil client& BVR+FL\\
-%Livreur& Personne en charge des livraisons&BVR+FL\\
-%\hline
-%\end{tabular}
-%
-%\section{Livraison}
-%\subsection{Tableau préparatoire}
-%\begin{tabular}{|c|c|c|}
-%\hline
-%Concept & Type & Definition\\
-%\hline
-%Restaurant&Classe&\\
-%Livreur&Classe&\\
-%Commande&Classe&\\
-%Terminal&Classe&\\
-%Livreur&Acteur&\\
-%Transporter des commandes&UC&\\
-%Prendre en charge une commande&UC&\\
-%Signaler la prise en charge&UC&\\
-%Terminal&Acteur&\\
-%Donner informations clients&UC&\\
-%Donner la position du livreur&UC&\\
-%Manager&Acteur&\\
-%Standardiste&Acteur&\\
-%Connaitre les positions des livreurs&UC&\\
-%Client&Acteur&\\
-%Savoir si le livreur est en approche&UC&\\
-%Signaler un danger&UC&\\
-%Envoyer message d'alerte&UC&\\
-%Message d'alerte&Classe&\\
-%\hline
-%\end{tabular}
-%
-%\subsection{Glossaire}
-%\begin{tabular}{|c|c|c|}
-%\hline
-%Terme&Définition&Auteur\\
-%\hline
-%GPS&Global Positioning System&BVR+FL\\
-%Simultanément&En un seul voyage&BVR+FL\\
-%"En approche"&Signifie que la commande a été prise en charge par le livreur&BVR+FL\\
-%\hline
-%\end{tabular}
-%
-%\section{Manager}
-%\subsection{Tableau préparatoire}
-%\begin{tabular}{|c|c|c|}
-%\hline
-%Concept & Type & Definition\\
-%\hline
-%Manager&Acteur&\\
-%Fixer les emplois du temps&UC&\\
-%Désigner les responsables sécurités&UC&\\
-%Visualiser les statistiques&UC&\\
-%Visualiser l'état des stocks&UC&\\
-%Visualiser la présence des employés&UC&\\
-%Visualiser la position d'un livreur&UC&\\
-%Visualiser les commandes d'un livreur&UC&\\
-%\hline
-%\end{tabular}
-%
-%\section{Responsable sécurité}
-%\subsection{Tableau préparatoire}
-%\begin{tabular}{|c|c|c|}
-%\hline
-%Concept & Type & Definition\\
-%\hline
-%Collaborateur&Classe&\\
-%Désigner comme responsable sécurité&UC&\\
-%Recevoir message de sécurité&UC&\\
-%Message de sécurité&Classe&\\
-%Livreur&Classe&\\
-%Responsable sécurité& Acteur&\\
-%Consulter message&UC&\\
-%Visualiser position du livreur&UC&\\
-%Prendre connaissance du numéro de téléphone du livreur&UC&\\
-%Application&Acteur&\\
-%Montrer les informations nécessaires&UC&\\ 
-%Manager&Acteur&\\
-%\hline
-%\end{tabular}
-%
-%\subsection{Glossaire}
-%\begin{tabular}{|c|c|c|}
-%\hline
-%Terme&Définition&Auteur\\
-%\hline
-%\multirow{2}{*}{Responsable sécurité}&Personne charger de s'assurer de la sécurité &\multirow{2}{*}{BVR+FL}\\
-%&du personnel. Peut être n'importe quel employé&\\
-%\hline
-%\end{tabular}
-%
-%\section{Responsable sécurité}
-%\subsection{Tableau préparatoire}
-%\begin{tabular}{|c|c|c|}
-%\hline
-%Concept & Type & Definition\\
-%\hline
-%Application&Acteur&\\
-%Gérer les heures de présence&UC&\\
-%Collaborateur&Acteur&\\
-%Se connecter à l'application &UC&\\
-%Signaler prise de service&UC&\\
-%Signaler fin de service&UC&\\
-%Visualiser les heures effectives&UC&\\
-%Manager&Acteur&\\
-%\hline
-%\end{tabular}
-%
-%\subsection{Glossaire}
-%\begin{tabular}{|c|c|c|}
-%\hline
-%Terme&Définition&Auteur\\
-%\hline
-%Heures effectives&Horaires réellement effectués par un employé &BVR+FL\\
-%\hline
-%\end{tabular}
+
 
 \signature
 

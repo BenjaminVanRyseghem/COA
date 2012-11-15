@@ -4,10 +4,22 @@
 \title{COA - Web Pizza: Rendu 2}
 \author{François \bsc{Lepan} \\ Benjamin \bsc{Van Ryseghem}}
 
+\newcommand\cu[1]{\vspace{0.5cm}\paragraph{\textcolor{red}{Cas d'utilisation : }} #1}
+\newcommand\acteur[1]{\vspace{-0.5cm}\paragraph{\textcolor{red}{Acteur : }} #1}
+\newcommand\pre{\vspace{-0.5cm}\paragraph{\textcolor{blue}{Pré-condition : }}\mbox{}
+
+}
+\newcommand\der{\vspace{-0.5cm}\paragraph{\textcolor{blue}{Déroulement principale :}}\mbox{}
+
+}
+\newcommand\post{\vspace{-0.5cm}\paragraph{\textcolor{blue}{Post-condition : }}\mbox{}
+
+}
+
 \begin{document}
 \maketitle
 
-\section{Table Préparatoire}
+\section{Table d'ordonnancement des cas d'utilisation}
 
 \begin{table}[!h]
 \begin{center}
@@ -15,30 +27,326 @@
 \hline 
 CU & MOA & MOE & Moyenne \\
 \hline
-Consulter offre &&&\\
-Création de profil  &&&\\
-Commander  &&&\\
-Payer Commande &&&\\
-Créditer points &&&\\
-Payer la commande &&&\\
-Proposer un horaire &&&\\
-Renoncer à la commande &&&\\
-Fixer le nombre de points de fidélité &&&\\
-Cuisson &&&\\
-Gérer Commande &&&\\
-Ajout de produits &&&\\
-Emballage &&&\\
-Consulter progression Commande &&&\\
-Contacter client en cas de problème &&&\\
-Modifier commande &&&\\
-Transporter des commandes &&&\\
-Prendre en charge une commande &&&\\
-Signaler un danger &&&\\
+Consulter offre &&5&\\
+Création de profil  &&3&\\
+Commander  &&5&\\
+Payer Commande &&4&\\
+Créditer points &&1&\\
+Payer la commande &&5&\\
+Proposer un horaire &&3.5&\\
+Renoncer à la commande &&2&\\
+Fixer le nombre de points de fidélité &&2&\\
+Cuisson &&5&\\
+Gérer Commande &&4&\\
+Ajout de produits &&4&\\
+Emballage &&3&\\
+Consulter progression Commande &&2&\\
+Contacter client en cas de problème &&4&\\
+Modifier commande &&4&\\
+Transporter des commandes &&4&\\
+Prendre en charge une commande &&3&\\
+Signaler un danger &&2&\\
 \hline
 \end{tabular}
 \end{center}
 \end{table}
 
+\section{Scénarios}
+
+\subsection{Scénario : Autre}
+
+\cu{Signaler prise de service}
+\acteur{Collaborateur}
+\pre
+Aucune.
+\der
+Le collaborateur se connecte à l'application et signale sa prise de service.
+\post
+Aucune.
+
+\cu{Signaler la fin service}
+\acteur{Collaborateur}
+\pre
+Aucune.
+\der
+Le collaborateur se connecte à l'application et signale la fin de son service.
+\post
+Aucune.
+
+\cu{Visualiser les heures effectives des collaborateurs.}
+\acteur{Manager}
+\pre
+Aucune.
+\der
+Le Manager se connecte à l'application et se renseigne sur les heures effectives de ses employés.
+\post
+Aucune.
+
+
+%%%%%%%%%%%%%%%%%%%%
+%% 											rajouter post condition
+%%%%%%%%%%%%%%%%%%%%
+\subsection{Scénario : Livraison}
+
+
+\cu{Transporter des commandes}
+\acteur{Livreur}
+\pre
+Une commande prête
+L'adresse du client
+\der
+Le Livreur récupère la commande.
+Il se connecte à son terminale et signale la prise en charge de la commande.
+Il se dirige a l'adresse d'expédition de la future commande
+Si il rencontre un danger : 
+	il le signale via son terminal
+Il fait sa livraison et il rentre à la pizzeria.
+\post
+Aucune.
+
+
+%%%%%%%%%%%%%%%%%%%%
+\subsection{Scénario : Manager}
+
+
+\cu{Fixer les emplois du temps}
+\acteur{Manager}
+\pre
+Connaitre les congés et les contrats de ses employés.
+\der
+Le Manager se connecte à l'application et fixe les emploi du temps de ses employés en fonction 
+de leurs congés et contrat.
+\post
+Les emplois du temps sont fixés.
+
+\cu{Désigner les responsables sécurités.}
+\acteur{Manager}
+\pre
+Aucune.
+\der
+Le Manager se connecte à l'application et choisi les nouveaux responsable sécurité en faisant 
+attention de donner ce rôle le plus équitablement possible. Pour ce faire il donne le droit de 
+consulter certaines informations le temps du mandat du responsable sécurité.
+\post
+Les nouveaux responsables sécurité sont désignés.
+
+\cu{Visualiser des informations concernant la pizzeria et les employés}
+\acteur{Manager}
+\pre
+Aucune.
+\der
+Le Manager se connecte à l'application et regarde les informations dont il a besoin comme 
+les commandes en cours, l'état des stocks, la présence des employés, etc.
+\post
+Aucune.
+
+
+%%%%%%%%%%%%%%%%%%%%
+\subsection{Scénario : Responsable sécurité}
+
+\cu{Obtenir divers informations concernants les livreurs}
+\acteur{Responsable sécurité}
+\pre
+Être désigné comme responsable sécurité.
+\der
+Le Responsable sécurité se connecte à l'application et prend connaissance des informations 
+dont il a besoin comme le numéro de téléphone ou la position des livreurs.
+Si il reçoit un message d'alerte d'un des livreurs il le consulte et fait part du problème 
+à ses supérieurs.
+\post Un message a été envoyé à son responsable si une erreur est intervenue.
+
+%%%%%%%%%%%%%%%%%%%%
+\subsection{Scénario : Commande}
+
+\cu{Consulter les offres}
+
+\acteur{Standardiste et client}
+
+\pre
+
+Du point de vue du standardiste : 
+	Un client est venu commander sur place.
+Du point de vue du client : 
+	Se connecter au site du restaurant.
+	
+\der
+
+Du point de vue du standardiste :
+	Le client arrive pour commander et il demande les offres disponibles.
+	Le standardiste regarde alors sur l'application les offres disponibles et les propose au client.
+Du point de vue du client : 
+	Le client se connecte au site du restaurant et regarde les offres disponibles.
+\post
+Le client connait les offres du restaurant.
+
+\cu{Création de profil}
+
+\acteur{Standardiste et client}
+
+\pre
+Du point de vue du standardiste :
+	Un client est venu sur place pour créer un profil.
+Du point de vue du client :
+	Se connecter au site du restaurant pour créer un profil.
+	
+\der
+
+Du point de vue du standardiste :
+	Le client arrive pour commander et il demande de créer un profil.
+	Le standardiste créé alors un profil pour ce client.
+Du point de vue du client : 
+
+	Le client se connecte au site du restaurant et se créé un profil.
+	
+\post
+
+Le client possède alors un profil pour ce restaurant.
+
+
+\cu{Commander}
+
+\acteur{Standardiste et client}
+
+\pre
+Du point de vue du standardiste :
+	Un client est venu sur place pour commander.
+Du point de vue du client :
+	Se connecter au site du restaurant pour commander.
+	
+\der
+
+Du point de vue du standardiste :
+	Le client arrive sur place ou il téléphone pour commander.
+	Si le client possède un profil le standardiste accède au profil du client pour récupérer l'adresse de celui-ci. Sinon, il lui demande l'adresse de livraison.			
+	Il récupère la commande de celui-ci.
+	Le client paye la commande en carte bancaire sur place ou lors de la livraison si il a téléphoné.
+	Le standardiste propose un horaire pour la livraison.
+	Tant que l'horaire ne convient pas au client, le standardiste propose un autre horaire.
+	À tout moment le client peut aussi renoncer à la commande.
+	Si il renonce à la commande, la commande est annulé. Sinon la commande est validé.
+	 
+Du point de vue du client : 
+	Le client se connecte au site du restaurant.
+	Il passe sa commande.
+	Si il possède un profil il se connecte a celui-ci afin de fournir une adresse de livraison. Sinon il doit rentrer ces informations.
+	Le client paye sa commande soit par carte bancaire soit via Paypal.
+	Le site propose alors plusieurs horaires.
+	Le client choisi l'horaire qui lui convient le mieux si il y en à un. La commande est alors validé. Sinon il peut renoncer à la commande.
+	Si la commande est validée le site envoie un mail à ce client récapitulant la commande.
+	
+\post
+Le client reçoit sa commande.
+Si le client possède un profil on lui crédite des points.
+
+\cu{Fixer le nombre de point de fidélité}
+
+\acteur{Manager}
+
+\pre
+
+Un nouveau produit est arrivé.
+Une mise a jour du système de point de fidélité.
+
+\der
+Le manager se connecte à l'application et fixe le nouveau nombre de point de fidélité du ou des produit(s) concernés.
+	
+\post
+Aucune.
+
+
+%%%%%%%%%%%%%%%%%%%%
+\subsection{Scénario : Préparation}
+
+\cu{Cuisson}
+
+\acteur{Cuisinier}
+
+\pre
+Une ou plusieurs commandes sont effectuées par un ou plusieurs clients.
+
+\der
+
+Le cuisinier consulte son terminal.
+Le cuisinier signale la prise en charge d'une commande sur son terminal.
+Il la prépare.
+Si il a besoin d'aide il peut en demander a un des préparateur.
+Si il ne peut pas préparer la commande il le signale et la commande est alors annulée.
+Si un ingrédient viens à manquer il le signale sur son terminal.
+Il signale la terminaison de cette  commande et prend en charge la suivante si il y en a une.
+
+\post
+La commande est préparée et prête à être envoyée.
+
+	
+\cu{Gérer une commande}
+
+\acteur{Livreur}
+
+\pre
+
+Une ou plusieurs commandes sont effectuées par un ou plusieurs clients.
+
+\der
+
+Il prend en charge les commandes dans l'ordre.
+Si il ne peut pas préparer la commande il le signale et la commande est alors annulée.
+Si un ingrédient viens à manquer il le signale sur son terminal.
+Il signale la terminaison de cette  commande et prend en charge la suivante si il y en a une.
+
+\post
+La commande est préparée et prête à être envoyée.
+
+
+\cu{Gérer une commande}
+
+\acteur{Livreur}
+
+\pre
+
+Une ou plusieurs commandes sont effectuées par un ou plusieurs clients.
+
+\der
+
+Il prend en charge les commandes dans l'ordre.
+Pour ce faire il ajoute les produits signaler par son terminal et effectue l'emballage de ceux demandé.
+Si il ne peut pas préparer la commande il le signale et la commande est alors annulée.
+Si un ingrédient viens à manquer il le signale sur son terminal.
+Il signale la terminaison de cette  commande et prend en charge la suivante si il y en a une.
+
+\post
+La commande est préparée et prête à être envoyée.
+
+
+\cu{Consulter la progression d'une commande}
+
+\acteur{Client}
+
+\pre
+
+Avoir effectuer une commande et posséder un compte sur le site.
+
+\der
+
+Le client se connecte sur son profil et consulte la progression en cours de sa commande.
+
+\post
+Aucune.
+
+
+\cu{Contacter le client en cas de problème}
+
+\acteur{Manager et réceptionniste}
+
+\pre
+
+Qu'il y ai un problème avec une commande signalé par un préparateur ou un cuisinier.
+
+\der
+
+Le manager ou le réceptionniste contacte le client concerné par la commande et lui propose de modifier sa commande.
+
+\post
+La commande est modifiée.
 
 \signature
 

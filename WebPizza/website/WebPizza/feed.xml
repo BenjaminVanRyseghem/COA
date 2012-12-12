@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  <id>urn:iweb:53A66D40-1135-4FF8-B0E0-D758A7323F96</id>
  <title>Page list Atom feed</title>
- <updated>2012-12-11T16:53:07+01:00</updated>
+ <updated>2012-12-12T19:05:32+01:00</updated>
  <link rel="self" href="feed.xml"/>
  <generator>iWeb</generator>
  <author>
@@ -14,7 +14,7 @@
   <title xmlns="urn:iweb:">Accueil</title>
   <in-navbar xmlns="urn:iweb:">EB6D6D47-FE5D-4743-81E5-18C9F51E707A</in-navbar>
   <link rel="alternate" href="Accueil.html"/>
-  <updated>2012-12-11T16:53:07.001+01:00</updated>
+  <updated>2012-12-12T19:05:32.001+01:00</updated>
   <content>Accueil</content>
  </entry>
  <entry>
@@ -23,7 +23,25 @@
   <title xmlns="urn:iweb:">Catalogue</title>
   <in-navbar xmlns="urn:iweb:">AEB128B1-7424-4041-B0DC-19736303C46D</in-navbar>
   <link rel="alternate" href="Catalogue.html"/>
-  <updated>2012-12-11T16:53:07.002+01:00</updated>
+  <updated>2012-12-12T19:05:32.002+01:00</updated>
   <content>Catalogue</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:4A5084CC-DB7A-4AB9-8520-796F54D52FDA</id>
+  <title>Panier</title>
+  <title xmlns="urn:iweb:">Panier</title>
+  <in-navbar xmlns="urn:iweb:">4A5084CC-DB7A-4AB9-8520-796F54D52FDA</in-navbar>
+  <link rel="alternate" href="Panier.html"/>
+  <updated>2012-12-12T19:05:32.003+01:00</updated>
+  <content>Panier</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:ED014CFA-583F-45DE-9333-FCE6DCD8B279</id>
+  <title>Profil</title>
+  <title xmlns="urn:iweb:">Profil</title>
+  <in-navbar xmlns="urn:iweb:">ED014CFA-583F-45DE-9333-FCE6DCD8B279</in-navbar>
+  <link rel="alternate" href="Profil.html"/>
+  <updated>2012-12-12T19:05:32.004+01:00</updated>
+  <content>Profil</content>
  </entry>
 </feed>

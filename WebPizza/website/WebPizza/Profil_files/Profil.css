@@ -23,9 +23,6 @@
 .style {
     padding: 4px;
 }
-.style_1 {
-    padding: 0px;
-}
 .style_SkipStroke_1 {
     background: transparent;
     opacity: 1.00;
@@ -34,22 +31,19 @@
     background: transparent;
     opacity: 1.00;
 }
+.style_External_630_50 {
+    position: relative;
+}
+.style_External_390_256 {
+    position: relative;
+}
 .style_SkipStroke {
     background: transparent;
     opacity: 1.00;
 }
-.style_External_325_112 {
-    position: relative;
-}
 .style_SkipStroke_3 {
     background: transparent;
     opacity: 1.00;
-}
-.style_External_630_49 {
-    position: relative;
-}
-.style_External_630_68 {
-    position: relative;
 }
 .Body {
     color: rgb(88, 77, 77);
@@ -73,16 +67,16 @@
     text-indent: 0px;
     text-transform: none;
 }
-.Caption {
+.Body_Small {
     color: rgb(88, 77, 77);
     font-family: 'ArialMT', 'Arial', sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     font-stretch: normal;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
     letter-spacing: 0;
-    line-height: 16px;
+    line-height: 18px;
     margin-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
@@ -90,10 +84,18 @@
     opacity: 1.00;
     padding-bottom: 0px;
     padding-top: 0px;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     text-indent: 0px;
     text-transform: none;
+}
+.Bold {
+    font-family: 'Arial-BoldMT', 'Arial', sans-serif;
+    font-size: 15px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
 }
 .Header {
     color: rgb(167, 167, 167);
@@ -117,14 +119,102 @@
     text-indent: 0px;
     text-transform: none;
 }
+.Heading_2 {
+    color: rgb(88, 77, 77);
+    font-family: 'Arial-BoldMT', 'Arial', sans-serif;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 16px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: none;
+}
+.Links {
+    color: rgb(88, 77, 77);
+    font-family: 'ArialMT', 'Arial', sans-serif;
+    font-size: 13px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: none;
+}
 .Normal {
     padding: 4px;
 }
-.Normal_External_630_68 {
+.Normal_External_630_50 {
     position: relative;
 }
-.Normal_External_630_49 {
+.Normal_External_390_256 {
     position: relative;
+}
+.Playlist {
+    color: rgb(88, 77, 77);
+    font-family: 'ArialMT', 'Arial', sans-serif;
+    font-size: 13px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: none;
+}
+.Sidebar_Body {
+    color: rgb(88, 77, 77);
+    font-family: 'ArialMT', 'Arial', sans-serif;
+    font-size: 15px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    opacity: 1.00;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0px;
+    text-transform: none;
 }
 .Title {
     color: rgb(88, 77, 77);
@@ -163,11 +253,14 @@
 .graphic_shape_layout_style_default {
     padding: 4px;
 }
-.graphic_shape_layout_style_default_External_630_32 {
+.graphic_shape_layout_style_default_External_390_32 {
     position: relative;
 }
 .graphic_textbox_layout_style_default {
     padding: 4px;
+}
+.graphic_textbox_layout_style_default_External_210_305 {
+    position: relative;
 }
 .graphic_textbox_layout_style_default_External_110_27 {
     position: relative;
@@ -175,12 +268,6 @@
 .graphic_textbox_style_default_SkipStroke {
     background: transparent;
     opacity: 1.00;
-}
-.image_cluster_layout_style_default_External_325_112 {
-    position: relative;
-}
-.image_cluster_layout_style_default {
-    padding: 0px;
 }
 a {
     color: rgb(88, 77, 77);
@@ -194,189 +281,41 @@ a:hover {
     color: rgb(0, 0, 0);
     text-decoration: underline;
 }
-#widget2 a {
-    color: rgb(88, 77, 77);
+ol  { 
+      padding:0;
+      margin:0;
+      text-indent:0;
+      list-style-type:none ;
+      list-style-image:none
+    }
+.Bullet { 
+          text-decoration:none ;
+          text-transform:none ;
+          border: none;          
+        }
+.bumper {
+    font-size: 1px;
+    line-height: 1px;
+}
+.tinyText {
+    font-size: 1px;
+    line-height: 1px;
+}
+#widget0 a:hover {
+    color: rgb(0, 0, 0);
     text-decoration: underline;
 }
-#widget1 a {
-    color: rgb(88, 77, 77);
+#widget0 a:visited {
+    color: rgb(121, 121, 121);
     text-decoration: underline;
 }
 #widget0 a {
     color: rgb(88, 77, 77);
     text-decoration: underline;
 }
-#widget3 a {
-    color: rgb(88, 77, 77);
-    text-decoration: underline;
-}
-#widget4 a {
-    color: rgb(88, 77, 77);
-    text-decoration: underline;
-}
-#widget5 a {
-    color: rgb(88, 77, 77);
-    text-decoration: underline;
-}
-#id3 div.caption {
-    line-height: 16px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    padding: 0px;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    text-align: center;
-    text-indent: 0px;
-}
-#widget4 a:visited {
-    color: rgb(121, 121, 121);
-    text-decoration: underline;
-}
-#widget1 .Comment_Posted_Date {
-    color: rgb(88, 77, 77);
-    font-family: 'Arial-BoldMT', 'Arial', sans-serif;
-    font-size: 14px;
-    font-stretch: normal;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: 16px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    opacity: 1.00;
-    text-align: left;
-    text-decoration: none;
-    text-transform: none;
-}
-#widget2 a:hover {
-    color: rgb(0, 0, 0);
-    text-decoration: underline;
-}
-#widget2 a:visited {
-    color: rgb(121, 121, 121);
-    text-decoration: underline;
-}
-#widget2 .Caption {
-    color: rgb(88, 77, 77);
-    font-family: 'ArialMT', 'Arial', sans-serif;
-    font-size: 14px;
-    font-stretch: normal;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 16px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    opacity: 1.00;
-    text-align: center;
-    text-decoration: none;
-    text-transform: none;
-}
-#id3 div.caption span.title {
-    color: rgb(88, 77, 77);
-    font-family: 'ArialMT', 'Arial', sans-serif;
-    font-size: 14px;
-    font-stretch: normal;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 16px;
-    opacity: 1.00;
-    text-decoration: none;
-    text-transform: none;
-}
-#widget0 a:visited {
-    color: rgb(121, 121, 121);
-    text-decoration: underline;
-}
-.bumper {
-    font-size: 1px;
-    line-height: 1px;
-}
-#widget5 a:hover {
-    color: rgb(0, 0, 0);
-    text-decoration: underline;
-}
 .spacer {
     font-size: 1px;
     line-height: 1px;
-}
-#widget2 .Comment_Posted_Date {
-    color: rgb(88, 77, 77);
-    font-family: 'Arial-BoldMT', 'Arial', sans-serif;
-    font-size: 14px;
-    font-stretch: normal;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: 16px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    opacity: 1.00;
-    text-align: left;
-    text-decoration: none;
-    text-transform: none;
-}
-#widget1 a:hover {
-    color: rgb(0, 0, 0);
-    text-decoration: underline;
-}
-#widget2 {
-    display: none;
-}
-#widget4 a:hover {
-    color: rgb(0, 0, 0);
-    text-decoration: underline;
-}
-#widget5 a:visited {
-    color: rgb(121, 121, 121);
-    text-decoration: underline;
-}
-#widget3 a:visited {
-    color: rgb(121, 121, 121);
-    text-decoration: underline;
-}
-#id3 canvas {
-    z-index: -1;
-}
-#widget1 a:visited {
-    color: rgb(121, 121, 121);
-    text-decoration: underline;
-}
-#widget0 a:hover {
-    color: rgb(0, 0, 0);
-    text-decoration: underline;
-}
-.tinyText {
-    font-size: 1px;
-    line-height: 1px;
-}
-#widget3 .Comment_Posted_Date {
-    color: rgb(88, 77, 77);
-    font-family: 'Arial-BoldMT', 'Arial', sans-serif;
-    font-size: 14px;
-    font-stretch: normal;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: 16px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    opacity: 1.00;
-    text-align: left;
-    text-decoration: none;
-    text-transform: none;
-}
-#widget3 a:hover {
-    color: rgb(0, 0, 0);
-    text-decoration: underline;
 }
 body { 
     -webkit-text-size-adjust: none;

@@ -12,7 +12,7 @@
       <enclosure url="http://www.webpizza.com/WebPizza/Catalogue_files/Media/homer_simpsons_/homer_simpsons_.jpg" length="40537" type="image/jpeg"/>
       <iphoto:thumbnail>http://www.webpizza.com/WebPizza/Catalogue_files/Media/homer_simpsons_/thumb.jpg</iphoto:thumbnail>
       <iweb:micro>http://www.webpizza.com/WebPizza/Catalogue_files/Media/homer_simpsons_/micro.jpg</iweb:micro>
-      <iweb:richTitle>&lt;div style=&quot;padding: 0px; &quot; class=&quot;image_cluster_layout_style_default_External_429_64&quot;&gt;&lt;div class=&quot;image_cluster_layout_style_default&quot;&gt;&lt;p style=&quot;padding-top: 0pt; &quot; class=&quot;Caption&quot;&gt;nom - prix&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;padding-bottom: 0pt; &quot; class=&quot;Caption&quot;&gt;(ingredients)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</iweb:richTitle>
+      <iweb:richTitle>&lt;div style=&quot;padding: 0px; &quot; class=&quot;style_External_325_112&quot;&gt;&lt;div class=&quot;style_1&quot;&gt;&lt;p style=&quot;padding-top: 0pt; &quot; class=&quot;Caption&quot;&gt;nom - prix&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;padding-bottom: 0pt; &quot; class=&quot;Caption&quot;&gt;(ingredients)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</iweb:richTitle>
     </item>
     <item>
       <title>nom - prix
@@ -22,7 +22,7 @@
       <enclosure url="http://www.webpizza.com/WebPizza/Catalogue_files/Media/thumb_up/thumb_up.jpg" length="21392" type="image/jpeg"/>
       <iphoto:thumbnail>http://www.webpizza.com/WebPizza/Catalogue_files/Media/thumb_up/thumb.jpg</iphoto:thumbnail>
       <iweb:micro>http://www.webpizza.com/WebPizza/Catalogue_files/Media/thumb_up/micro.jpg</iweb:micro>
-      <iweb:richTitle>&lt;div style=&quot;padding: 0px; &quot; class=&quot;image_cluster_layout_style_default_External_429_64&quot;&gt;&lt;div class=&quot;image_cluster_layout_style_default&quot;&gt;&lt;p style=&quot;padding-top: 0pt; &quot; class=&quot;Caption&quot;&gt;nom - prix&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;padding-bottom: 0pt; &quot; class=&quot;Caption&quot;&gt;(ingredients)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</iweb:richTitle>
+      <iweb:richTitle>&lt;div style=&quot;padding: 0px; &quot; class=&quot;style_External_325_112&quot;&gt;&lt;div class=&quot;style_1&quot;&gt;&lt;p style=&quot;padding-top: 0pt; &quot; class=&quot;Caption&quot;&gt;nom - prix&lt;br/&gt;&lt;/p&gt;&lt;p style=&quot;padding-bottom: 0pt; &quot; class=&quot;Caption&quot;&gt;(ingredients)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</iweb:richTitle>
     </item>
   </channel>
 </rss>
